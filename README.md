@@ -37,3 +37,14 @@ Note: Python 3 module filenames may contain additional information, e.g. ```pyre
 ### For librealsense-2.49.0
 .so files are inside /librealsense-2.49.0/build/wrappers/python.
 Please copy them(```pyrealsense2.cpython-36m-aarch64-linux-gnu.so.2.49.0```, ```pyrealsense2.cpython-36m-aarch64-linux-gnu.so.2.49```, ```pyrealsense2.cpython-36m-aarch64-linux-gnu.so.```) next to your script (put inside the pyrealsense2 file of the project) or it will pop up module issue.
+
+
+or
+```
+sudo apt-get install nano
+nano .bashrc
+add 
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/jetbot/librealsense-2.49.0/build/wrappers/python
+source .bashrc
+echo $LD_LIBRARY_PATH
+```
