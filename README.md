@@ -36,4 +36,4 @@ Note: Python 3 module filenames may contain additional information, e.g. ```pyre
 
 ### For librealsense-2.49.0
 .so files are inside /librealsense-2.49.0/build/wrappers/python.
-Please copy them(```pyrealsense2.cpython-36m-aarch64-linux-gnu.so.2.49.0```, ```pyrealsense2.cpython-36m-aarch64-linux-gnu.so.2.49```, ```pyrealsense2.cpython-36m-aarch64-linux-gnu.so.```) next to your script or it will pop up module issue.
+Please copy them(```pyrealsense2.cpython-36m-aarch64-linux-gnu.so.2.49.0```, ```pyrealsense2.cpython-36m-aarch64-linux-gnu.so.2.49```, ```pyrealsense2.cpython-36m-aarch64-linux-gnu.so.```) next to your script (put inside the pyrealsense2 file of the project) or it will pop up module issue.
