@@ -26,3 +26,14 @@ sudo udevadm control --reload-rules
 sudo udevadm trigger
 realsense-viewer
 ```
+
+update your PYTHONPATH environment variable to add the path to the pyrealsense library
+```
+export PYTHONPATH=$PYTHONPATH:/usr/local/lib
+```
+Alternatively, copy the build output (```librealsense2.so``` and ```pyrealsense2.so```) next to your script.
+Note: Python 3 module filenames may contain additional information, e.g. ```pyrealsense2.cpython-35m-arm-linux-gnueabihf.so```)
+
+### For librealsense-2.49.0
+.so files are inside /librealsense-2.49.0/build/wrappers/python.
+Please copy them(```pyrealsense2.cpython-36m-aarch64-linux-gnu.so.2.49.0```, ```pyrealsense2.cpython-36m-aarch64-linux-gnu.so.2.49```, ```pyrealsense2.cpython-36m-aarch64-linux-gnu.so.```) next to your script or it will pop up module issue.
