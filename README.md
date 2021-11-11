@@ -28,23 +28,39 @@ realsense-viewer
 ```
 
 update your PYTHONPATH environment variable to add the path to the pyrealsense library
-```
-export PYTHONPATH=$PYTHONPATH:/usr/local/lib
-```
-Alternatively, copy the build output (```librealsense2.so``` and ```pyrealsense2.so```) next to your script.
-Note: Python 3 module filenames may contain additional information, e.g. ```pyrealsense2.cpython-35m-arm-linux-gnueabihf.so```)
-
-### For librealsense-2.49.0
-.so files are inside /librealsense-2.49.0/build/wrappers/python.
-Please copy them(```pyrealsense2.cpython-36m-aarch64-linux-gnu.so.2.49.0```, ```pyrealsense2.cpython-36m-aarch64-linux-gnu.so.2.49```, ```pyrealsense2.cpython-36m-aarch64-linux-gnu.so.```) next to your script (put inside the pyrealsense2 file of the project) or it will pop up module issue.
 
 
-or
 ```
 sudo apt-get install nano
+```
 nano .bashrc
-add 
+add to the bottom
+```
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/jetbot/librealsense-2.49.0/build/wrappers/python
 source .bashrc
 echo $LD_LIBRARY_PATH
 ```
+
+if it does not work
+
+Alternatively, copy the build output (```librealsense2.so``` and ```pyrealsense2.so```) next to your script.
+Note: Python 3 module filenames may contain additional information, e.g. ```pyrealsense2.cpython-35m-arm-linux-gnueabihf.so```)
+### For librealsense-2.49.0
+.so files are inside /librealsense-2.49.0/build/wrappers/python.
+Please copy them(```pyrealsense2.cpython-36m-aarch64-linux-gnu.so.2.49.0```, ```pyrealsense2.cpython-36m-aarch64-linux-gnu.so.2.49```, ```pyrealsense2.cpython-36m-aarch64-linux-gnu.so.```) next to your script (put inside the pyrealsense2 file of the project) or it will pop up module issue.
+
+go to the target project file
+cd ~/xxx/.../project file
+for example:
+```
+cd ~/Frank/realsensetest/D435_segmentation
+mkdir pyrealsense2
+```
+
+go to the librealsense file to copy the .so file
+```
+cd
+cd ~/librealsense-2.49.0/build/wrappers/python
+cp -rf * ~/Frank/realsensetest/D435_segmentation/pyrealsense2/
+```
+
