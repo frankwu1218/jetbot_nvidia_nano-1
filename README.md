@@ -41,6 +41,7 @@ git clone https://github.com/pytorch/vision torchvision   # see below for versio
 cd torchvision
 git checkout tags/v0.8.1
 export BUILD_VERSION=0.8.1
+pip3 install --upgrade setuptools
 sudo python3 setup.py install
 ```
 
